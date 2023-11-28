@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        a:link {
+	text-decoration: none;
+	color: rgba(157, 148, 175, 1);
+	z-index: 1;
+
+}
+a:visited {
+	text-decoration: none;
+	color: rgba(157, 148, 175, 1);
+	z-index: 1;
+}
+a:hover {
+	text-decoration: none;
+	color: rgba(157, 148, 175, 1);
+	z-index: 1;
+}
+a:active {
+	text-decoration: none;
+	color: rgba(157, 148, 175, 1);
+}
+    </style>
+</head>
+<body style="background-color: rgb(226, 221, 204)">
+    <div class="flexbox" style="height: 780px;">
+        <div class="navmenu">
+            <div class="headernav">
+                <h1 class="logonav">Wimbra</h1>
+            </div>
+            <div class="navigation">
+                <nav class = "navigationnav">
+                    <a href="dashboard.html"><img class="iconnav" src="images/dashboard.png" alt="">Dashboard</a>
+                    <a href="cadastro-pacientes.php"><img class="iconnav" src="images/cadastro.png" alt="">Cadastro Pacientes</a>
+                    <a href="cadastro-profissionais.php"><img class="iconnav" src="images/cadastro.png" alt="">Cadastro Profissionais</a>
+                    <a href="agenda.html"><img class="iconnav" src="images/calendario.png" alt="">Agenda</a>
+                    <a class="linkativo" href="solicitacoes.php"><img class="iconnav" src="images/solicitacoes_ativo.png" alt="">Solicitações</a>
+                    <a href="configuracoes.html"><img class="iconnav" src="images/configuracoes.png" alt="">Configurações</a>
+                </nav>
+            </div>
+        </div>
+        <div class="content" id="contentborder">
+            <div id="adicionarpaciente">
+                <header class="adicionarhead"><p>Adicionando Novo Profissional</p></header>
+                <form action="adicionar_solicitacoes.php" method="post" id="adicionarpacienteform">
+                    <div class="divinput">
+                        <label for="paciente" class="labelform">Paciente</label><br>
+                        <input type="text" class="formulario" name="paciente" id="paciente" style="width: 280px;">
+                        <p class="label-abaixo">Nome Paciente</p>
+                    </div>
+                    <div class="divinput">
+                        <label for="profissional" class="labelform">Profissional</label><br>
+                        <input type="text" class="formulario" name="profissional" id="profissional" style="width: 230px;">
+                        <p class="label-abaixo">CPF</p>
+                    </div>
+                    <div class="divinput">
+                        <label for="data" class="labelform">Data</label><br>
+                        <input type="text" class="formulario" name="data" id="data" data-mask="__/__/____" data-mask-selectonfocus="true">
+                        <p class="label-abaixo">Data da Solicitação</p>
+                    </div>
+                    <div class="divinput">
+                        <label for="data_agendamento" class="labelform">Data</label><br>
+                        <input type="text" class="formulario" name="data_agendamento" id="data" data-mask="__/__/____" data-mask-selectonfocus="true">
+                        <p class="label-abaixo">Data do Agendamento</p>
+                    </div>    
+                    <div class="divinput">
+                        <label for="descricao" class="labelform">Descrição</label><br>
+                        <input type="text" class="formulario" name="descricao" id="descricao">
+                        <p class="label-abaixo">Descrição</p>
+                    </div>
+                    <div class="divinput">
+                        <label for="status" class="labelform">Status</label><br>
+                        <input type="text" class="formulario" name="status" id="status">
+                        <p class="label-abaixo">Status</p>
+                    </div>
+                    </div>
+                    <div class="formsubmit" style="margin-top: -30px; margin-bottom: 30px;">
+                        <input type="submit" id="enviar" value="Salvar">
+                    </div>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</body>
+</html>
